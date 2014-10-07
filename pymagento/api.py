@@ -1,4 +1,7 @@
-import xmlrpclib
+try:
+    import xmlrpclib
+except ImportError:
+    import xmlrpc.client as xmlrpclib
 
 MAGENTO_API_URI = "/api/xmlrpc/"
 
