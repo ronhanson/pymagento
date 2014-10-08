@@ -1,5 +1,11 @@
 from distutils.core import setup
+import sys
+PY3 = sys.version > '3'
 
+if PY3:
+    requires = []
+else:
+    requires = ['xmlrpclib']
 
 setup(name = "pymagento",
       author = "russ-",
@@ -9,7 +15,5 @@ setup(name = "pymagento",
       packages = [
           'pymagento',
       ],
-      install_requires=[
-          'xmlrpclib',
-      ],
+      install_requires=requires
 )
