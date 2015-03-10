@@ -31,8 +31,8 @@ class Magento(object):
     class MagentoException(Exception):
         pass
 
-    def __init__(self, host, user, passwd):
-        self.proxy = xmlrpclib.ServerProxy("http://%s%s" % (host, MAGENTO_API_URI))
+    def __init__(self, host, user, passwd, protocol='http'):
+        self.proxy = xmlrpclib.ServerProxy("%s://%s%s" % (protocol, host, MAGENTO_API_URI))
         self.token = self.proxy.login(user, passwd)
 
     def close(self):

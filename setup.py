@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 import sys
 PY3 = sys.version > '3'
 
@@ -11,7 +11,7 @@ setup(name = "pymagento",
       author = "russ-",
       author_email = "russminus@gmail.com",
       url = "http://github.com/supplybuy/pymagento",
-      version = "1.0.1",
+      version = "1.1.1",
       packages = [
           'pymagento',
       ],
